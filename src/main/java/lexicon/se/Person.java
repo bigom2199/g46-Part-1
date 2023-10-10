@@ -21,8 +21,12 @@ public class Person {
     }
 
     public int getId() {
+
         return id;
     }
+      public void setId(int id){
+         this.id = id;
+      }
 
     public String getEmail() {
         return email;
@@ -38,5 +42,15 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id=" + id +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
