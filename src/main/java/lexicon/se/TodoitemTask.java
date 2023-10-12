@@ -1,19 +1,24 @@
 package lexicon.se;
 
-public class TodoItemTask {
+public class TodoitemTask {
 
     private int id;
     private boolean assigned;
     private TodoItem todoitem;
     private Person assignee;
-    public TodoItemTask(int id,Person assignee,boolean assigned,TodoItem todoitem){
+    public TodoitemTask(int id, Person assignee, boolean assigned, TodoItem todoitem){
         this.id= id;
         this.assignee= assignee;
+        setTodoItem(todoitem);
+        setAssignee(assignee);
 
     }
 
     public int getId() {
         return id;
+    }
+    public void setId(int id){
+        this.id = id;
     }
 
     public boolean isAssigned() {

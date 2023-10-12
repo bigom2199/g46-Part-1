@@ -52,10 +52,17 @@ public void setId(){
         }
         this.title=title;
     }
+       public String getTaskDescription() {
+        return taskDescription;
 
+       }
     public void setTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
     }
+      public LocalDate getDeadLine() {
+        return deadLine;
+      }
+
 
     public void setDeadLine(LocalDate deadLine) {
         this.deadLine = deadLine;

@@ -10,14 +10,14 @@ public class TodoItemTest {
 
     }
     void setTitle(){
-        final TodoItem item = getExample();
+         TodoItem item = getExample();
+
+
+
         NullPointerException thrown1 = Assertions.assertThrows(nullPointerException.class,() ->{
             item.setTitle(null);
         });
-        IllegalArgumentException thrown2 = Assertions.assertThrows(IllegalArgumentException.class,()->{
-            item.setTitle("");
-        });
-        assertEquals("title is not null!",thrown2.getMessage());
-        assertEquals("title is not allwoed to be empty!",thrown2.getMessage());
-    }
-}
+        IllegalArgumentException thrown2 = Assertions.assertThrows(IllegalArgumentException.class,()-> {
+        }
+        assertEquals("title can not null");
+        thrown2
