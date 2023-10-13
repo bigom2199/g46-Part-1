@@ -12,7 +12,7 @@ public class PersonTest {
     }
 
 
-    @Test
+
     public void setFirstName() {
 
         NullPointerException thrown = Assertions.assertThrows(NullPointerException.class, () -> {
@@ -24,26 +24,33 @@ public class PersonTest {
         thrown.getMessage();
     }
 
-    private void assertEquals(String firstNameIsNotNull) {
-    }
+
+
 
     public void setLastName() {
-        PersonTest person = new PersonTest();
+        NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() ->{
+
+        PersonTest person = getExample();
         person.setLastName();
-        assertEquals("last name can not be null");
+
+        assertEquals("last name can not be null!");
         thrown.getMessage();
     }
 
 
     void setEmail() {
-        Person person = new person();
+              NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() -> {
+
+        Person person = getExample();
         person.setEmail(null);
+
         assertEquals("email can not be null!");
         person.getEmail();
     }
 
 }
 
-
+    }
+}
 
 

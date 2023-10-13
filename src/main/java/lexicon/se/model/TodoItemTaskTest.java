@@ -13,15 +13,19 @@ public class TodoItemTaskTest {
 
     public void isAssigned(){
         TodoitemTask itemTask = getExample();
+
         itemTask.setAssigned(null);
 
         assertFalse(itemTask.isAssigned());
-        itemTask.setAssigned(new PersonTest("firstName","lastName","email"));
+        itemTask.setAssigned(new PersonTest( 1,"firstName","lastName","email"));
         assertTrue(itemTask.isAssigned());
 
     }
 
     void setTodoItem(){
+        NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() -> {
+
+
 
             TodoitemTask itemTask = getExample();
             itemTask.setTodoItem(null);
