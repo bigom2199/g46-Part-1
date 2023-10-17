@@ -2,55 +2,39 @@ package lexicon.se.model;
 
 import lexicon.se.Person;
 
-import java.text.ParseException;
-
 public class PersonTest {
+      Person getExample(){
+          return new Person(1,"firstName","lastName","email");
 
+      }
 
-    public PersonTest getExample() {
-        return new Person(1, "firstName", "lastName", "email");
+    public PersonTest() {
     }
 
+    public void setFirstName(String firstName){
+       if(firstName == null)  throw new IllegalArgumentException();
+       NullPointerException thrown = Assertion.assertThrows(NullPointerException.class,() -> {
+           Person person = getExample();
+           person.setFirstName(null);
 
+       });
+       assertEquals("first name cannot be null!",thrown.getMessage())
 
-    public void setFirstName() {
+      }
+      public void setLastName(){
+          NullPointerException thrown = Assertion.assertThrows(NullPointerException.class,()->{
+              Person person = getExample();
+              person.setLastName(null);
+          });
+          assertEquals("last name can not be null!",thrown.getMessage());
 
-        NullPointerException thrown = Assertions.assertThrows(NullPointerException.class, () -> {
-            Person person = getExample();
-            person.setFirstName(null);
-
-        });
-        assertEquals("first name is not null");
-        thrown.getMessage();
-    }
-
-
-
-
-    public void setLastName() {
-        NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() ->{
-
-        PersonTest person = getExample();
-        person.setLastName();
-
-        assertEquals("last name can not be null!");
-        thrown.getMessage();
-    }
-
-
-    void setEmail() {
-              NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() -> {
-
-        Person person = getExample();
-        person.setEmail(null);
-
-        assertEquals("email can not be null!");
-        person.getEmail();
-    }
+      }
+         public void setEmail(){
+          NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,()->{
+               Person person = getExample();
+               person.setEmail(null);
+          });
+          assertEquals("email can not be null!",thrown.getMessage());
+         }
 
 }
-
-    }
-}
-
-

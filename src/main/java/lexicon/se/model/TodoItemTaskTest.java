@@ -1,36 +1,33 @@
 package lexicon.se.model;
 
-import lexicon.se.TodoItem;
+import lexicon.se.Person;
 import lexicon.se.TodoitemTask;
 
 import java.time.LocalDate;
 
-public class TodoItemTaskTest {
-    TodoitemTask getExample(){
-        return  new TodoitemTask(1,false,new TodoItem(1,"Test Title",null,
-                LocalDate.now(),false,null),null);
-    }
+public class TodoItemTaskTest{
+      TOdoItemTest getExample(){
+          return new TodoItemTaskTest(1,false, new TodoItem (1," Test Title",null, LocalDate.now(),false,null),null);
 
-    public void isAssigned(){
-        TodoitemTask itemTask = getExample();
+      }
+      public  void isAssigned(){
+          TodoitemTask itemTask = getExample(){
+              itemTask.setAssignee(null);
+              assertFalse(itemTask.isAssigned());
+              itemTask.setAssignee(new Person(1,"firstName","lastName","email"));
+              assert True(itemTask.isAssigned());
 
-        itemTask.setAssigned(null);
+          }
+          public void setTodoItem(){
+              NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() -> {
+                  TodoitemTask itemTask = getExample();
+                  itemTask.setTodoItem(null);
 
-        assertFalse(itemTask.isAssigned());
-        itemTask.setAssigned(new PersonTest( 1,"firstName","lastName","email"));
-        assertTrue(itemTask.isAssigned());
+              });
+              assert Equals("todoitem can not be null!",thrown.getMessage());
 
-    }
-
-    void setTodoItem(){
-        NullPointerException thrown = Assertions.assertThrows(NullPointerException.class,() -> {
-
-
-
-            TodoitemTask itemTask = getExample();
-            itemTask.setTodoItem(null);
-
-        asertEquals("todoItem is not null!",thrown.getMessage());
+          }
+      }
 
     }
-}
+

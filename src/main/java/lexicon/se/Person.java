@@ -6,9 +6,9 @@ public class Person {
      private  int id;
      private String email;
      public Person (String firstName,String lastName,String email,int id) {
-         this.firstName=firstName;
-         this.lastName =lastName;
-         this.email = email;
+         setFirstName(firstName);
+         setLastName (lastName);
+         setEmail(email);
          this.id= id;
      }
 
