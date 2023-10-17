@@ -6,7 +6,7 @@ import lexicon.se.TodoitemTask;
 import java.time.LocalDate;
 
 public class TodoItemTaskTest{
-      TOdoItemTest getExample(){
+      TodoitemTask getExample(){
           return new TodoItemTaskTest(1,false, new TodoItem (1," Test Title",null, LocalDate.now(),false,null),null);
 
       }
